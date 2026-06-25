@@ -3,7 +3,9 @@
 import FadeUp from "@/components/FadeUp";
 import { CtaArrowIcon, HeroStarIcon } from "@/components/icons/SharedIcons";
 
-export default function HeroBanner() {
+type HeroBannerProps = { onOpenContact: () => void };
+
+export default function HeroBanner({ onOpenContact }: HeroBannerProps) {
   return (
     <section id="hero-banner">
       <div className="hero-bg" />
@@ -25,10 +27,10 @@ export default function HeroBanner() {
           </p>
         </FadeUp>
         <FadeUp className="hero-actions" style={{ transitionDelay: "0.3s" }}>
-          <a href="#" className="btn-primary">
+          <button type="button" className="btn-primary" onClick={onOpenContact}>
             Discuss Your Project
             <CtaArrowIcon />
-          </a>
+          </button>
           <div className="hero-badge">
             <HeroStarIcon />
             Trusted by enterprises since 2020

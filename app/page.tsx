@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <DemoNav onOpenContact={() => setContactOpen(true)} />
       <SectionDivider />
-      <HeroBanner />
+      <HeroBanner onOpenContact={() => setContactOpen(true)} />
       <SectionDivider />
       <ServicesSection />
       <SectionDivider />
