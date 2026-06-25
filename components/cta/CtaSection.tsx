@@ -1,7 +1,11 @@
+"use client";
+
 import FadeUp from "@/components/FadeUp";
 import { CtaArrowIcon } from "@/components/icons/SharedIcons";
 
-export default function CtaSection() {
+type CtaSectionProps = { onOpenContact: () => void };
+
+export default function CtaSection({ onOpenContact }: CtaSectionProps) {
   return (
     <section id="cta-section">
       <div className="container">
@@ -20,10 +24,10 @@ export default function CtaSection() {
               <p className="cta-text">
                 From smart cameras to embedded electronics, solar energy systems, and infrastructure monitoring — we help organizations deploy reliable technology at scale.
               </p>
-              <a href="#" className="btn-primary">
+              <button type="button" className="btn-primary" onClick={onOpenContact}>
                 Discuss Your Project
                 <CtaArrowIcon />
-              </a>
+              </button>
             </div>
           </div>
         </FadeUp>

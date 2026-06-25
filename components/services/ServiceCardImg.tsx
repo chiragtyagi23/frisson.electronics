@@ -45,8 +45,8 @@ export default function ServiceCardImg({
     >
       <div className="card-img-wrap">
         <img src={imageSrc} alt={imageAlt} loading="lazy" />
-        <div className="card-img-badge">{icon}</div>
       </div>
+      <div className="card-img-badge">{icon}</div>
       <div className="card-body">
         <div className="card-title">{title}</div>
         <div className="card-desc">{description}</div>
